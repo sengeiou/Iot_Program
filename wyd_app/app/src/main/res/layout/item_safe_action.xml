@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:padding="@dimen/w_3"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22:00-07:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w_12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/w_2"
+            android:text="主卧"
+            android:textColor="#EE6A77"
+            android:textSize="@dimen/w_10"
+            app:layout_constraintLeft_toLeftOf="@+id/time_tv"
+            app:layout_constraintTop_toBottomOf="@+id/time_tv" />
+
+        <TextView
+            android:id="@+id/action_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w_20"
+            android:text="未探测到人体活动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w_10"
+            app:layout_constraintLeft_toRightOf="@+id/location_tv"
+            app:layout_constraintTop_toTopOf="@+id/location_tv" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_min_size_1"
+            android:layout_marginTop="@dimen/w_3"
+            android:background="#30D9D9D9"
+            android:layerType="software"
+            app:layout_constraintTop_toBottomOf="@id/location_tv" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w_3"
+            android:layout_marginTop="@dimen/w_3"
+            android:drawableLeft="@mipmap/ic_home_safe_head"
+            android:drawablePadding="@dimen/w_5"
+            android:text="未撤防"
+            android:textColor="@color/safe_status_title"
+            android:textSize="@dimen/w_10"
+            app:layout_constraintLeft_toLeftOf="@+id/location_tv"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+
+        <TextView
+            android:id="@+id/phone_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w_5"
+            android:drawableLeft="@mipmap/ic_home_safe_head"
+            android:drawablePadding="@dimen/w_3"
+            android:text="电话未接"
+            android:textColor="@color/safe_status_title"
+            android:textSize="@dimen/w_10"
+            app:layout_constraintLeft_toRightOf="@+id/status"
+            app:layout_constraintTop_toTopOf="@+id/status" />
+
+
+        <TextView
+            android:id="@+id/message_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w_5"
+            android:drawableLeft="@mipmap/ic_home_safe_head"
+            android:drawablePadding="@dimen/w_3"
+            android:text="已发短信"
+            android:textColor="@color/safe_status_title"
+            android:textSize="@dimen/w_10"
+            app:layout_constraintLeft_toRightOf="@+id/phone_status"
+            app:layout_constraintTop_toTopOf="@+id/phone_status" />
+
+</android.support.constraint.ConstraintLayout>

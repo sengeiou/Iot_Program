@@ -1,0 +1,208 @@
+<resources>
+    <string name="app_name">VLauncher</string>
+
+
+    <!-- 一维数组 -->
+    <string-array name="applist">
+
+        <item>com.android.camera2</item>
+        <item>com.android.contacts</item>
+        <item>com.android.deskclock</item>
+        <item>com.android.dialer</item>
+
+        <item>com.android.gallery3d</item>
+        <item>com.android.music</item>
+        <item>com.android.settings</item>
+
+        <item>com.flywisesz.x2m200</item>
+        <item>com.softwinner.fireplayer</item>
+        <item>com.vetch.schedule</item>
+        <item>com.vtech.homesecurity</item>
+
+    </string-array>
+
+    <!--  *******************************************桌面中心*********************************************  -->
+
+    <string name="phone">電話</string>
+
+    <string name="health">健康</string>
+
+    <string name="safe">安全</string>
+
+    <string name="schedule">日程</string>
+
+    <string name="at_house">在家</string>
+
+    <string name="alway_from_house">离家</string>
+
+
+    <string name="recent_schedule">最近日程</string>
+
+    <string name="real_time_security">實時安全</string>
+
+    <string name="joint_protection">聯動布防</string>
+
+    <string name="normal_protection">普通布防</string>
+
+    <string name="name">姓名：</string>
+
+    <string name="telephone">電話：</string>
+
+    <string name="confirm">確定</string>
+
+    <string name="cancel">取消</string>
+
+    <string name="a_key_protection">一鍵布防</string>
+
+    <string name="a_key_removal">一键撤防</string>
+
+    <string name="no_message">暫無布防消息</string>
+
+    <string name="not_protection">未布防</string>
+
+    <string name="is_protection">已布防</string>
+
+    <string name="wait_protection">等待布防</string>
+
+    <string name="area_normal">防區正常</string>
+
+    <string name="area_error">防區異常</string>
+
+    <string name="received_call">電話已接</string>
+
+    <string name="unreceived_call">電話未接</string>
+
+    <string name="received_message">短信已發</string>
+
+    <string name="unreceived_message">短信未發</string>
+
+    <string name="human_activity_detected">探測到人體活動</string>
+
+    <string name="human_activity_undetected">未探測到人體活動</string>
+
+    <string name="no_safe_report">未檢測到异常情况</string>
+
+    <string name="air_quality">空氣質量 </string>
+
+    <!--   ******************************************报告中心*****************************************  -->
+
+    <string name="report_center">報告中心</string>
+
+    <string name="safe_report">安全報告</string>
+
+    <string name="health_report">健康報告</string>
+
+    <string name="blood_pressure">血壓</string>
+
+    <string name="heart_chart">心電圖</string>
+
+    <string name="heart_rate">心率</string>
+
+
+    <string name="day">當天</string>
+
+    <string name="week">本周</string>
+
+    <string name="month">月度</string>
+
+    <string name="max">最高</string>
+
+    <string name="avg">平均</string>
+
+    <string name="min">最低</string>
+
+    <string name="door_error">门磁異常開啟 %d 次</string>
+
+    <string name="infrared_correlation_error">紅外對設被觸發 %d 次</string>
+
+    <string name="temperature_is_too_high">溫感溫度過高 %d 次</string>
+
+    <string name="infrared_intrusion">紅外人員入侵 %d 次</string>
+
+    <string name="protection_alarm">聯動布防報警 %d 次</string>
+
+    <string name="sos_name">紧急求救</string>
+    <string name="phone_name">电话</string>
+    <string name="msg_name">短信</string>
+    <string name="health_name">健康管理</string>
+    <string name="chat_name">视频聊天</string>
+    <string name="iot_alarm_name">居家安防</string>
+    <string name="nearby_name">我身边</string>
+    <string name="contacts_name">联系人</string>
+    <string name="settings_name">设置</string>
+
+    <!-- An option in the 'Contact photo' dialog, if there is already a photo [CHAR LIMIT=50] -->
+    <string name="take_new_photo">拍攝新相片</string>
+
+    <!-- An option in the 'Contact photo' dialog, if there is no photo yet [CHAR LIMIT=50] -->
+    <string name="pick_photo">選擇相片</string>
+
+    <!-- An option in the 'Contact photo' dialog, if there is already a photo [CHAR LIMIT=50] -->
+    <string name="pick_new_photo">"選取新相片"</string>
+
+    <!-- An option in the 'Contact photo' dialog, if there is no photo yet [CHAR LIMIT=50] -->
+    <string name="take_photo">拍攝相片</string>
+
+    <!-- File Authority for the photo picker -->
+    <string name="photo_file_provider_authority">com.vtech.app.files</string>
+    <!-- Description in the dialog that appears if there are no pictures from which to create an icon for a contact -->
+    <string name="photoPickerNotFoundText">No pictures are available on the device.</string>
+    <!-- Toast displayed when saving a contact photo failed. [CHAR LIMIT=NONE] -->
+    <string name="contactPhotoSavedErrorToast">Couldn\'t save contact photo changes</string>
+
+    <string name="sos">SOS</string>
+    <string name="set">設置</string>
+    <string name="recycle_list_empty">你的SOS聯系人爲空.\n你可以...</string>
+    <string name="import_contacts">導入聯系人</string>
+    <string name="add_contact">添加聯系人</string>
+    <string name="finish">完成</string>
+    <string name="delete">刪除</string>
+    <string name="sos_introduce">最多可添加3個緊急聯系人.\n長按並拖動聯系人可調整順序.</string>
+    <string name="contacts">聯系人</string>
+    <string name="search_contacts">搜索聯系人</string>
+    <string name="search">搜索</string>
+    <string name="first_name">姓</string>
+    <string name="Second_name">名</string>
+    <string name="phone_number">電話號碼</string>
+    <string name="save">保存</string>
+    <string name="edit_contact">編輯聯系人</string>
+    <string name="delete_contact">刪除聯系人</string>
+    <string name="contact_detatil_name">姓名</string>
+    <string name="contact_detatil_number">電話號碼</string>
+    <string name="contact_detatil_call">打電話</string>
+    <string name="contact_detatil_sms">發短信</string>
+    <string name="contact_detatil_recent">最近通話記錄</string>
+    <string name="contact_add_name">姓名</string>
+    <string name="add_data_success">添加數據成功</string>
+    <string name="add_data_fail">添加數據失敗</string>
+    <string name="update_data_success">更新數據成功</string>
+    <string name="update_data_fail">更新數據失敗</string>
+    <string name="delete_data_success">刪除成功</string>
+    <string name="record_today">今天</string>
+    <string name="record_yesterday">昨天</string>
+    <string name="select_one_contact">請先選擇壹個聯系人</string>
+    <string name="select_three_contact">最多可添加三個聯系人</string>
+    <string name="confirm_delete_app">確認刪除該應用</string>
+    <string name="contact_collection">收藏</string>
+    <string name="change_photo">更換頭像</string>
+    <string name="remove_photo">刪除照片</string>
+    <string name="pick_application">選擇應用程序</string>
+    <string name="re_add_application">不可重復添加應用</string>
+    <string name="no_content">姓名和手機號不能為空</string>
+    <string name="str_loading">數據加載中</string>
+    <string name="have_contact">此聯系人已添加，不能重復添加</string>
+    <string name="no_number">號碼不能為空</string>
+    <string name="pick_contacts">選擇聯繫人</string>
+    <string name="no_contacts">沒有聯繫人</string>
+    <string name="emergency_number">緊急號碼</string>
+    <string name="str_unknown">未知</string>
+    <string name="add_new_contact">新增聯系人</string>
+    <string name="delete_dialer_record">刪除通話記錄</string>
+    <string name="add_blocked_number">加入黑名單</string>
+    <string name="det_blocked_number">從黑名單移除</string>
+    <string name="str_total">在全部</string>
+    <string name="str_contact_end">個聯系人中搜索</string>
+    <string name="str_imei">國際移動設備識別碼</string>
+    <string name="str_ok">確定</string>
+
+</resources>

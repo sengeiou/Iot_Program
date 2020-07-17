@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_000000"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@drawable/icon_setting_bg"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:visibility="gone"
+        android:includeFontPadding="false"
+        android:text="报警"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_10"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:id="@+id/lin_top"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:textColor="@color/color_white"
+                    android:text="SYS" />
+
+
+                <TextView
+                    android:id="@+id/tv_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/color_fd0100"
+                    android:textSize="@dimen/dp_48"
+                    tools:text="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_6"
+                    android:textColor="@color/color_white"
+                    android:text="mmHg" />
+            </LinearLayout>
+            <View
+                android:layout_width="@dimen/px_1"
+                android:layout_marginRight="@dimen/dp_6"
+                android:background="@color/color_white"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:textColor="@color/color_white"
+                    android:text="DIA" />
+
+
+                <TextView
+                    android:id="@+id/tv_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/dp_48" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_6"
+                    android:textColor="@color/color_white"
+                    android:text="mmHg" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:id="@+id/v_temp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lin_top"
+            android:layout_width="match_parent"
+            android:background="@color/color_white"
+            android:layout_height="@dimen/px_1"/>
+        <LinearLayout
+            android:id="@+id/lin_center"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_6"
+                android:textColor="@color/color_white"
+                android:text="Pulse/min" />
+
+
+            <TextView
+                android:id="@+id/tv_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/color_4cfd01"
+                android:textSize="@dimen/dp_48"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_bone"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/dp_16"
+                android:text="@string/str_touch" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_temp1"
+            android:layout_width="match_parent"
+            android:background="@color/color_white"
+            android:layout_height="@dimen/px_1"/>
+        <com.vtech.vhealth.function.main.newpressure.NEcgView
+            android:id="@+id/ecg_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_130" />
+
+        <com.vtech.vhealth.function.main.newpressure.NEcgView
+            android:id="@+id/ecg_view_standard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_130"
+            android:visibility="gone"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/top_layout2"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:layout_width="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="@dimen/dp_130">
+
+            <com.vtech.vhealth.function.main.newpressure.NEcgView
+                android:id="@+id/ecg_view_wave"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_130"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginRight="@dimen/dp_230"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv1"
+                app:layout_constraintLeft_toRightOf="@+id/ecg_view_wave"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:text="SYS/DIA"
+                android:layout_marginTop="@dimen/dp_6"
+                android:textColor="@color/color_white"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_wave_sp"
+                app:layout_constraintLeft_toRightOf="@+id/ecg_view_wave"
+                app:layout_constraintTop_toBottomOf="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:textSize="@dimen/dp_28"
+                android:textColor="@color/color_fe0000"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv2"
+                app:layout_constraintLeft_toRightOf="@+id/ecg_view_wave"
+                app:layout_constraintTop_toBottomOf="@+id/tv_wave_sp"
+                android:layout_width="wrap_content"
+                android:text="Pulse"
+                android:layout_marginTop="@dimen/dp_6"
+                android:textColor="@color/color_white"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:gravity="right"
+                android:text="mmHg"
+                android:layout_marginRight="@dimen/dp_4"
+                android:layout_marginTop="@dimen/dp_6"
+                android:textColor="@color/color_white"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_90"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_wave_sp"
+                app:layout_constraintRight_toRightOf="@+id/tv_wave_dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_wave_sp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:text="90"
+                android:textColor="@color/color_white"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_wave_dp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_90"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:textSize="@dimen/dp_28"
+                android:textColor="@color/color_ffd105"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_marginRight="@dimen/dp_12"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_wave_dp"
+                android:layout_width="wrap_content"
+                android:text="min"
+                android:layout_marginTop="@dimen/dp_6"
+                android:textColor="@color/color_white"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/tv_wave_rate"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_wave_sp"
+                app:layout_constraintRight_toRightOf="@+id/tv_wave_dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_90"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_width="wrap_content"
+                android:text="0"
+                android:textSize="@dimen/dp_28"
+                android:textColor="@color/color_4cfd01"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.vtech.vhealth.function.main.newpressure.NEcgView
+                android:id="@+id/ecg_view_wave1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_130"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.vtech.vhealth.function.main.newpressure.NEcgView
+                android:id="@+id/ecg_view_wave2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_130"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ecg_view_wave1" />
+
+            <com.vtech.vhealth.function.main.newpressure.NEcgView
+                android:id="@+id/ecg_view_wave3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_130"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ecg_view_wave2" />
+
+
+            <com.vtech.vhealth.function.main.newpressure.NEcgView
+                android:id="@+id/ecg_view_wave4"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_130"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ecg_view_wave3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_130">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/u1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/u2"
+            android:layout_width="@dimen/dp_66"
+            android:layout_height="@dimen/dp_66">
+
+            <ImageView
+                android:id="@+id/iv_user1"
+                android:layout_width="@dimen/dp_66"
+                android:layout_height="@dimen/dp_66"
+                android:background="@drawable/user_setect"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.vtech.vhealth.function.widget.CircleImageView
+                android:id="@+id/ib_user1"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user"
+                android:background="@drawable/user_swith"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/dp_66"
+            android:id="@+id/u2"
+            app:layout_constraintLeft_toRightOf="@+id/u1"
+            app:layout_constraintRight_toLeftOf="@+id/u3"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_height="@dimen/dp_66">
+
+            <ImageView
+                android:id="@+id/iv_user2"
+                android:layout_width="@dimen/dp_66"
+                android:layout_height="@dimen/dp_66"
+                android:background="@drawable/user_nor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.vtech.vhealth.function.widget.CircleImageView
+                android:id="@+id/ib_user2"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/user_swith"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_user" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/dp_66"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:id="@+id/u3"
+            app:layout_constraintLeft_toRightOf="@+id/u2"
+            app:layout_constraintRight_toLeftOf="@+id/tv_start"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="@dimen/dp_66">
+
+            <ImageView
+                android:id="@+id/iv_user3"
+                android:layout_width="@dimen/dp_66"
+                android:layout_height="@dimen/dp_66"
+                android:background="@drawable/user_nor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.vtech.vhealth.function.widget.CircleImageView
+                android:id="@+id/ib_user3"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/user_swith"
+                android:src="@drawable/ic_user" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <com.vtech.vhealth.function.widget.ActionButton
+            android:id="@+id/tv_start"
+            android:layout_width="@dimen/dp_106"
+            android:layout_height="@dimen/dp_106"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/shape_start"
+            android:gravity="center"
+            android:text="@string/str_start"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/dp_20"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintLeft_toRightOf="@+id/radio_group"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/rg_mod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/u1">
+
+            <RadioButton
+                android:id="@+id/tv_mod_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:checked="true"
+                android:background="@drawable/mod_switch_l"
+                android:button="@null"
+                android:text="@string/str_data"
+                android:textSize="@dimen/dp_16"
+                android:textColor="@color/color_white" />
+
+            <RadioButton
+                android:id="@+id/tv_mod_wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_1"
+                android:text="@string/str_wave"
+                android:textSize="@dimen/dp_16"
+                android:gravity="center"
+                android:background="@drawable/mod_switch_r"
+                android:button="@null"
+                android:textColor="@color/color_white" />
+
+        </RadioGroup>
+
+
+        <com.vtech.vhealth.function.widget.ActionButton
+            android:id="@+id/tv_set"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/shape_setting"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_6"
+            android:text="@string/str_setting"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/dp_16"
+            app:layout_constraintRight_toLeftOf="@+id/tv_start"
+            app:layout_constraintTop_toBottomOf="@+id/u1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

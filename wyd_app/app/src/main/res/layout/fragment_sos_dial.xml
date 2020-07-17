@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sos_dial"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_weight="2"
+        android:background="@color/ivory"
+        android:id="@+id/sos_contact_info"
+        android:text="5s后拨打\nSOS Contact\n138 0000 0000"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/f_24"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/sos_contact_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_weight="1"
+        android:background="@color/lemonchiffon"
+        android:id="@+id/sos_dial"
+        android:text="SOS Dial"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/f_24"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/sos_contact_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_weight="1"
+        android:background="@color/lemonchiffon"
+        android:id="@+id/cancel_sos_dial"
+        android:text="Cancel SOS Dial"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/f_24"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>

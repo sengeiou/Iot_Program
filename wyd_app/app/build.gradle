@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+def getTime() {
+    return new java.text.SimpleDateFormat("yyyyMMddHHmm").format(new Date());
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.vtech.app"
+        minSdkVersion 24
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.${getTime()}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+        //RenderScript向下兼容
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        def password = "vtechsz"
+        def alias = "androiddebugkey"
+        def filePath = "platform.jks"  //如 ../facesharp.jks//签名文件路径
+
+        debug {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+        release {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+             outputFileName = "VLauncher.apk"
+         }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "LARGE_UI_SWITCH", "true"
+        }
+        debug {
+            buildConfigField "boolean", "LARGE_UI_SWITCH", "true"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//  implementation 'com.android.support:appcompat-v7:27.0.0'
+//  implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+//  implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:28.0.0'
+
+//  testImplementation 'junit:junit:4.12'
+//  androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//  androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //ButterKnife
+    implementation 'com.jakewharton:butterknife:7.0.1'
+
+//  implementation 'org.xclcharts:lib:2.4'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.google.code.gson:gson:2.3.1'
+
+    implementation 'joda-time:joda-time:2.9.9'
+
+    implementation 'com.androidplot:androidplot-core:1.5.6'
+
+    implementation 'com.github.promeg:tinypinyin:2.0.3' // TinyPinyin核心包，约80KB
+
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'//adapter 适配器
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4'
+
+    implementation 'com.github.gittjy:LoadingDialog:1.0.2'
+
+    //https://mvnrepository.com/artifact/com.google.guava/guava
+    //implementation group: 'com.google.guava', name: 'guava', version: '27.1-jre'
+    //https://mvnrepository.com/artifact/com.googlecode.libphonenumber/libphonenumber
+    //implementation group: 'com.googlecode.libphonenumber', name: 'libphonenumber', version: '8.11.4'
+    implementation project(':library')
+}
+
+greendao {
+    schemaVersion 4 //数据库版本号
+    daoPackage 'com.vtech.app.largeuidb.db' // 设置DaoMaster、DaoSession、Dao 包名
+    targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    generateTests false //设置为true以自动生成单元测试。
+    targetGenDirTests 'src/main/java' //应存储生成的单元测试的基本目录。默认为 src / androidTest / java。
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    >
+    <solid android:color="#10000000"  />
+    <corners
+        android:bottomLeftRadius="@dimen/w_12"
+        android:bottomRightRadius="@dimen/w_12"
+        android:topLeftRadius="@dimen/w_12"
+        android:topRightRadius="@dimen/w_12" />
+
+<!--    <stroke
+        android:width="@dimen/widget_min_size_1"
+        android:color="@color/splite_line" />-->
+</shape>

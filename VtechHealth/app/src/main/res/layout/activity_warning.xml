@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".function.main.MainHealthActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clayout_avg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/bg_white_border"
+        android:paddingBottom="@dimen/dp_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <EditText
+            android:id="@+id/et_pressure_high"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_marginRight="@dimen/dp_32"
+            android:digits="@string/digits_num"
+            app:layout_constraintLeft_toRightOf="@+id/tv_pressure_high_hint"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/warning_hint" />
+
+        <EditText
+            android:id="@+id/et_pressure_low"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_marginRight="@dimen/dp_32"
+            android:digits="@string/digits_num"
+            app:layout_constraintLeft_toRightOf="@+id/tv_pressure_low_hint"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pressure_high_hint" />
+
+        <EditText
+            android:id="@+id/et_rate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_32"
+            android:digits="@string/digits_num"
+            app:layout_constraintLeft_toRightOf="@+id/tv_pressure_low_hint"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pressure_low_hint" />
+
+        <TextView
+            android:id="@+id/warning_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_4"
+            android:padding="@dimen/dp_16"
+            android:text="@string/warning_set"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv_pressure_high_hint"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="@dimen/dp_6"
+            android:text="@string/health_pressure_high_hint"
+            android:textColor="@color/color_707070"
+            app:layout_constraintBaseline_toBaselineOf="@+id/et_pressure_high"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/warning_hint" />
+
+        <TextView
+            android:id="@+id/tv_pressure_low_hint"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="@dimen/dp_6"
+            android:text="@string/health_pressure_low_hint"
+            android:textColor="@color/color_707070"
+            app:layout_constraintBaseline_toBaselineOf="@+id/et_pressure_low"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pressure_high" />
+
+
+        <TextView
+            android:id="@+id/tv_rate_hint"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="@dimen/dp_6"
+            android:text="@string/health_heart_rate_hint"
+            android:textColor="@color/color_707070"
+            app:layout_constraintBaseline_toBaselineOf="@+id/et_rate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pressure_low" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.vtech.vhealth.function.widget.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

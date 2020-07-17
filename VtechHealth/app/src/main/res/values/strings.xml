@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">健康</string>
+    <string name="back">返回</string>
+    <string name="health_tab_bpressure">血压</string>
+    <string name="health_tab_ecg">心电</string>
+    <string name="health_tab_report">报告</string>
+    <string name="health_real_time">实时</string>
+    <string name="health_avg">平均</string>
+    <string name="health_heart_rate">心率bmp</string>
+    <string name="health_heart_rate_hint">心率</string>
+    <string name="health_pressure_high">收缩压mmHg</string>
+    <string name="health_pressure_high_hint">收缩压</string>
+    <string name="health_pressure_low_hint">舒张压</string>
+    <string name="health_pressure_low">舒张压mmHg</string>
+    <string name="warning_set">报警阈值设定</string>
+    <string name="calibration_set">校准值</string>
+    <string name="calibration_dec">当个人的血压和心率数据超过正常范围时，需填写 校准值以获得更好的测量结果</string>
+    <string name="warning_value">报警阈值</string>
+    <string name="calibration">校准</string>
+    <string name="digits_num">0123456789</string>
+    <string name="health_i_know">我知道啦</string>
+    <string name="str_calbration_hint">校准过程中请将手指置于血压测量处，并保持不动 直到校准完成</string>
+    <string name="str_start_calibration">开始校准</string>
+    <string name="str_calibration_success">校准成功</string>
+    <string name="str_calibration_fail">录入失败！\n 请重新开始校准</string>
+    <string name="str_calibrating">校准中</string>
+    <string name="str_start_calibrating">开始校准</string>
+    <string name="str_wait_calibrating">校准中...</string>
+    <string name="str_clear_success">校准数据清除成功！</string>
+    <string name="str_clear_fail">校准数据清除失败！</string>
+    <string name="str_start_measure">请放好手指开始采集数据</string>
+    <string name="str_cur_no_data">当前还没有采集到数据，请调整手指继续测量</string>
+    <string name="str_cur_rate">"当前心率%1$d超过警告阈值%2$d" </string>
+    <string name="str_cur_sbp">"当前收缩压%1$d超过警告阈值%2$d" </string>
+    <string name="str_cur_bdp">"当前舒张压%1$d超过警告阈值%2$d" </string>
+    <string name="str_health_stop">"测量结束当前收缩压%1$s当前舒张压%2$s心率%3$s"</string>
+    <string name="str_please_intput_rate">请输入收缩压</string>
+    <string name="str_please_intput_sbp">请输入舒张压</string>
+    <string name="str_please_intput_bdp">请输入心率</string>
+    <string name="str_sure">确定</string>
+    <string name="clear">清除</string>
+    <string name="str_intput_rate">请输入心率阈值</string>
+    <string name="str_intput_sbp">请输入收缩压阈值</string>
+    <string name="str_input_bdp">请输入舒张压阈值</string>
+    <string name="str_measure">测量</string>
+    <string name="str_measuring">测量中</string>
+    <string name="str_set_warning">请点击设置报警阈值</string>
+    <string name="str_cur_set">报警阈值%1$d/%2$d mmHg %3$d bmp</string>
+    <string name="str_hint_hi">您好～！</string>
+    <string name="str_hint_dec">为了您更好的使用，请先了解正确方式</string>
+    <string name="str_set_calibration">设置校准值</string>
+    <string name="str_pulse">脉搏波形</string>
+
+    <string name="heart_data">心率数据</string>
+    <string name="heart_rate_variability">心率变异性</string>
+    <string name="data_meaning">数据含义</string>
+    <string name="analysis_of_heart_rate_variability">心率变异性分析</string>
+    <string name="analysis_of_heart_rate_variability_msg">在计算HRV（心率变异性）时，可通过时域和频率两种方法实现</string>
+    <string name="analysis_of_heart_rate_variability_describe">以下数据分别为其中涉及到的参数</string>
+    <string name="time_domain_parameter">时域参数</string>
+    <string name="frequency_parameter">频率参数</string>
+
+    <string name="ecg_measurement_completed">心电测量已结束</string>
+    <string name="str_start">开始</string>
+    <string name="str_ok">确定</string>
+    <string name="str_data">数据</string>
+    <string name="str_wave">波形</string>
+    <string name="str_setting">设置</string>
+    <string name="str_name">姓名</string>
+    <string name="str_age">年龄</string>
+    <string name="str_sex">性别</string>
+    <string name="str_id">身份</string>
+    <string name="str_area">地区</string>
+    <string name="str_set">用户设置</string>
+    <string name="str_cancle">取消</string>
+    <string name="str_know">我知道了</string>
+    <string name="str_touch">拇指轻按测量处</string>
+    <string name="str_signal">信号质量:%1$s</string>
+    <string name="str_hrv_ms">心率变异性</string>
+    <string name="str_mood">情绪</string>
+    <string name="str_hr_bmp">稳健心率</string>
+    <string name="str_load_img_success">头像上传成功</string>
+    <string name="str_load_img_fail">头像上传失败</string>
+    <string name="str_userinfo_success">用户信息更新成功</string>
+    <string name="str_userinfo_fail">用户信息更新失败</string>
+
+    <string-array  name="heart_data_mean_title">
+        <item>HRV（心率变异性)</item>
+        <item>HR（稳健心率)</item>
+        <item>mood（情绪）</item>
+    </string-array >
+
+    <string-array  name="heart_data_mean_describe">
+        <item>逐次心跳周期差异，参考值1-300ms</item>
+        <item>心率的稳健估计，参考值40-170bmp</item>
+        <item>1-100，数值越低越平静</item>
+    </string-array >
+
+    <string-array  name="str_sex">
+        <item>女</item>
+        <item>男</item>
+    </string-array >
+
+</resources>

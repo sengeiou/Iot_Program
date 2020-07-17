@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".function.main.MainHealthActivity">
+
+    <com.vtech.vhealth.function.widget.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clayout_avg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/bg_white_border"
+        android:paddingBottom="@dimen/dp_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+        <EditText
+            android:id="@+id/et_pressure_high"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_64"
+            android:digits="@string/digits_num"
+            app:layout_constraintLeft_toRightOf="@+id/tv_pressure_high_hint"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/warning_dec" />
+
+        <EditText
+            android:id="@+id/et_pressure_low"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_marginRight="@dimen/dp_64"
+            android:digits="@string/digits_num"
+            app:layout_constraintLeft_toRightOf="@+id/tv_pressure_low_hint"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pressure_high_hint" />
+
+        <EditText
+            android:id="@+id/et_rate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_64"
+            android:digits="@string/digits_num"
+            app:layout_constraintLeft_toRightOf="@+id/tv_pressure_low_hint"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pressure_low_hint" />
+
+        <TextView
+            android:id="@+id/warning_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_4"
+            android:paddingTop="@dimen/dp_10"
+            android:text="@string/calibration_set"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/dp_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/warning_dec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_4"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_6"
+            android:text="@string/calibration_dec"
+            android:textColor="@color/color_707070"
+            android:textSize="@dimen/dp_12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/warning_hint"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_pressure_high_hint"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="@dimen/dp_6"
+            android:text="@string/health_pressure_high_hint"
+            android:textSize="@dimen/dp_18"
+            android:textColor="@color/color_707070"
+            app:layout_constraintBaseline_toBaselineOf="@+id/et_pressure_high"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/warning_dec" />
+
+        <TextView
+            android:id="@+id/tv_pressure_low_hint"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="@dimen/dp_6"
+            android:textSize="@dimen/dp_18"
+            android:text="@string/health_pressure_low_hint"
+            android:textColor="@color/color_707070"
+            app:layout_constraintBaseline_toBaselineOf="@+id/et_pressure_low"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pressure_high" />
+
+
+        <TextView
+            android:id="@+id/tv_rate_hint"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="@dimen/dp_6"
+            android:text="@string/health_heart_rate_hint"
+            android:textSize="@dimen/dp_18"
+            android:textColor="@color/color_707070"
+            app:layout_constraintBaseline_toBaselineOf="@+id/et_rate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pressure_low" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clayout_avg">
+
+        <TextView
+            android:id="@+id/tv_calibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_24"
+            android:background="@drawable/bg_calibration"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/str_start_calibration"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/dp_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_24"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_24"
+            android:text="@string/str_calbration_hint"
+            android:textColor="@color/color_707070"
+            android:textSize="@dimen/dp_12" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

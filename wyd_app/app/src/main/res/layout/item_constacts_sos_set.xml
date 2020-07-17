@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:clickable="true"
+    android:background="@drawable/shape_sos_contact_item"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/w_5"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/contact_icon"
+        android:layout_width="@dimen/w_66"
+        android:layout_height="@dimen/w_66"
+        android:src="@mipmap/contact_icon_def_lui"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/w_20"/>
+
+    <ImageView
+        android:id="@+id/contact_select_icon"
+        android:layout_width="@dimen/w_22"
+        android:layout_height="@dimen/w_22"
+        android:layout_marginTop="@dimen/w_20"
+        android:layout_marginLeft="@dimen/w_20"
+        android:src="@mipmap/ic_contact_unselect"/>
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/home_app_name_color"
+        android:layout_below="@id/contact_icon"
+        android:text="@string/contacts_name"
+        android:textSize="@dimen/f_22"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingLeft="@dimen/w_16"
+        android:paddingRight="@dimen/w_16"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/contact_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/home_app_name_color"
+        android:layout_below="@id/contact_name"
+        android:text="13800001234"
+        android:textSize="@dimen/f_14"
+        android:paddingLeft="@dimen/w_16"
+        android:paddingRight="@dimen/w_16"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/w_20"/>
+
+</RelativeLayout>

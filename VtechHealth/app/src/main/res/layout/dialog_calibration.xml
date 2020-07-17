@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_main"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingBottom="@dimen/dp_6"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/str_calibration_success"
+            android:textColor="@color/ap_black"
+            android:textSize="@dimen/dp_20"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/dp_26"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/str_sure"
+            android:textAllCaps="false"
+            android:textColor="#A5A8EA" />
+    </LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/w_170"
+    android:layout_height="@dimen/w_40"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/btn_delet"
+        android:layout_width="@dimen/w_170"
+        android:layout_height="@dimen/w_40"
+        android:text="Delete the call record"
+        android:textAllCaps="false"
+        android:textColor="@color/contacts_text_color"
+        android:textSize="@dimen/w_15"/>
+</LinearLayout>

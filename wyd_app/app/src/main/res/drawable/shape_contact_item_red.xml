@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 单击时的背景颜色 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/pressed_color"/>
+            <corners
+                android:topLeftRadius="@dimen/w_40"
+                android:topRightRadius="@dimen/w_40"
+                android:bottomLeftRadius="@dimen/w_40"
+                android:bottomRightRadius="@dimen/w_40"/>
+        </shape>
+    </item>
+    <!-- 未单击时的背景颜色 -->
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#ffff3636"/>
+            <corners
+                android:topLeftRadius="@dimen/w_40"
+                android:topRightRadius="@dimen/w_40"
+                android:bottomLeftRadius="@dimen/w_40"
+                android:bottomRightRadius="@dimen/w_40"/>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/title_view"
+        android:background="@color/tab_background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_48">
+        <LinearLayout
+            android:id="@+id/layout_import_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:paddingLeft="@dimen/w_20"
+            android:gravity="center_vertical">
+            <ImageView
+               android:src="@mipmap/ic_import_back"
+               android:id="@+id/iv_import_back"
+               android:layout_width="@dimen/w_20"
+               android:layout_height="@dimen/w_20"/>
+        </LinearLayout>
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/layout_import_back"
+            app:layout_constraintRight_toLeftOf="@id/layout_import_sure"
+            android:gravity="center"
+            android:id="@+id/title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/import_contacts"
+            android:textColor="@color/white"
+            android:textSize="@dimen/f_22" />
+        <LinearLayout
+            android:id="@+id/layout_import_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingRight="@dimen/w_20"
+            android:gravity="center_vertical">
+            <ImageView
+                android:src="@mipmap/ic_import_sure"
+                android:id="@+id/iv_import_sure"
+                android:layout_width="@dimen/w_20"
+                android:layout_height="@dimen/w_20"/>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/title_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.90"
+        android:paddingStart="@dimen/w_10"
+        android:drawableStart="@mipmap/groupgroup69"
+        android:drawablePadding="@dimen/w_10"
+        android:text="Search contacts"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/f_20"
+        android:focusable="false"
+        android:layout_marginTop="@dimen/w_10"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/w_40"
+        android:id="@+id/search_contact"
+        android:background="@drawable/shape_contact_search"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_contact"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/w_10"
+        android:id="@+id/contacts_list_container"
+        android:layout_height="0dp"
+        android:layout_width="0dp" />
+
+    <!--<android.support.v4.view.ViewPager
+        app:layout_constraintLeft_toLeftOf="@id/search_contact"
+        app:layout_constraintRight_toRightOf="@id/search_contact"
+        app:layout_constraintTop_toBottomOf="@id/search_contact"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/w_40"
+        android:id="@+id/vp_contacts"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />-->
+
+</android.support.constraint.ConstraintLayout>

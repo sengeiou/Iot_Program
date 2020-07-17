@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical">
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/myPlot"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:domainTitle=""
+        app:domainTitleTextSize="@dimen/domain_label_font_size"
+        app:gridBackgroundColor="#FFFFFF"
+        app:legendAnchor="right_bottom"
+        app:rangeTitle=""
+        app:rangeTitleTextSize="@dimen/range_label_font_size"
+
+        app:graphMarginTop="0dp"
+        app:graphMarginLeft="0dp"
+        app:graphMarginBottom="0dp"
+        app:graphMarginRight="0dp"
+
+        app:graphPaddingTop="0dp"
+        app:graphPaddingBottom="0dp"
+        app:graphPaddingLeft="0dp"
+
+        app:legendHeightMode="absolute"
+        app:legendHeight="0dp"
+        app:legendWidthMode="absolute"
+        app:legendWidth="0dp"
+
+        renderMode="useBackgroundThread"
+
+        androidPlot.backgroundPaint.color="#FFFFFF"
+
+        androidPlot.borderPaint.color="#FFFFFF"
+        app:title=""
+        app:titleTextSize="@dimen/title_font_size" />
+
+
+
+    <!--
+       app:graphMarginTop="10dp"
+       app:graphMarginLeft="10dp"
+       app:graphMarginBottom="15dp"
+       app:graphMarginRight="10dp"
+       app:legendHeightMode="absolute"
+       app:legendHeight="15dp"
+       app:legendWidthMode="absolute"
+       app:legendWidth="15dp"
+       -->
+
+    <!--
+        app:androidPlot.graphWidget.rangeLabelPaint.textSize="@dimen/range_tick_label_font_size"
+        app:androidPlot.graphWidget.rangeOriginLabelPaint.textSize="@dimen/range_tick_label_font_size"
+        app:androidPlot.graphWidget.domainLabelPaint.textSize="@dimen/domain_tick_label_font_size"
+        app:androidPlot.graphWidget.domainOriginLabelPaint.textSize="@dimen/domain_tick_label_font_size"
+        app:androidPlot.legendWidget.textPaint.textSize="@dimen/legend_text_font_size"
+    -->
+
+</LinearLayout>

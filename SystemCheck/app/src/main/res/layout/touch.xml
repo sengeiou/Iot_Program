@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="触摸屏幕测试"
+        android:textSize="15dp"
+        android:paddingLeft="15dp"
+        android:textColor="@color/blue"/>
+  <!--  <com.vtech.check.view.MultiTouchView
+        android:id="@+id/multiTouchView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+
+    <com.vtech.check.view.DrawLineView
+        android:id="@+id/dwView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

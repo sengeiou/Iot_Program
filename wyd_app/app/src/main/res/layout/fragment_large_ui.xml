@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<android.support.constraint.ConstraintLayout
+        android:id="@+id/top_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_main_air"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,1:0.3351"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.11"
+        app:layout_constraintWidth_percent="0.90">
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/icon_sun"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="h,1:0.75"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintWidth_percent="0.22" />
+
+        <View
+            android:id="@+id/air_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_main_bottom_air"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.25" />
+
+        <TextView
+            android:id="@+id/city_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_main_localtion"
+            android:drawablePadding="@dimen/w_5"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="ShenZhen"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/w_9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/time_tv"
+            app:layout_constraintTop_toTopOf="@+id/air_bottom_view"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <TextClock
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="hh:mm"
+            android:format24Hour="HH:mm"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:text="12 : 20"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/w_36"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.23" />
+
+
+        <TextClock
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/w_5"
+            android:format12Hour="yyyy.MM.dd"
+            android:format24Hour="yyyy.MM.dd"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="01.02"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/w_10"
+
+            app:layout_constraintLeft_toLeftOf="@+id/time_tv"
+            app:layout_constraintTop_toBottomOf="@+id/time_tv" />
+
+        <TextClock
+            android:id="@+id/week_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w_5"
+            android:format12Hour="EEEE"
+            android:format24Hour="EEEE"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="周五"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/w_10"
+            app:layout_constraintBottom_toBottomOf="@+id/date_tv"
+            app:layout_constraintLeft_toRightOf="@+id/date_tv" />
+
+
+        <TextView
+            android:id="@+id/temperature_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="23°"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/w_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/air_bottom_view" />
+
+
+        <TextView
+            android:id="@+id/descrip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Cloudy 19°/26°"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/w_6"
+            app:layout_constraintBottom_toTopOf="@+id/air_tv"
+            app:layout_constraintLeft_toRightOf="@+id/temperature_tv"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/air_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Air quality: good"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/w_6"
+            app:layout_constraintBaseline_toBaselineOf="@+id/temperature_tv"
+            app:layout_constraintLeft_toLeftOf="@id/descrip_tv"
+            app:layout_constraintTop_toBottomOf="@+id/descrip_tv" />
+
+    </android.support.constraint.ConstraintLayout> -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/w_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>

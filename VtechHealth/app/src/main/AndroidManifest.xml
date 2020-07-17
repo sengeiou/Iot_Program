@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
+    android:sharedUserId="android.uid.system"
+    package="com.vtech.vhealth">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".AppData"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".function.main.MainHealthActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+
+        <activity
+            android:name=".function.main.newpressure.PressureActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".function.main.pressure.warning.WarningActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".function.main.pressure.calibration.CalibrationActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".function.main.newpressure.setting.SettingActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name=".function.provider.EcgProvider"
+            android:authorities="com.vtech.vhealth.ecgprovider"
+            android:exported="true"
+            android:process=":provider" />
+        <provider
+            android:authorities="com.vtech.vhealth.healthprovider"
+            android:exported="true"
+            android:name=".function.provider.SerialProvider"/>
+
+        <provider
+            android:authorities="com.vtech.vhealth.healthprovider.fileprovider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+    </application>
+
+
+</manifest>

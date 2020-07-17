@@ -1,0 +1,61 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <declare-styleable name="ReplaceSelectorImageView">
+        <attr name="norBackGround" format="reference"/>
+        <attr name="pressBackGround" format="reference"/>
+    </declare-styleable>
+
+    <style name="MyEditText" parent="AppTheme">
+         <item name="colorControlNormal">@color/splite_line</item>
+         <item name="colorControlActivated">@color/dialog_text_color</item>
+    </style>
+
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="SubItemDlgScreenParent" parent="@android:style/Widget.Material.Light.ActionMode">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:actionModeBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="SubItemDlgScreen" parent="@android:style/Theme.Material.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:actionModeStyle">@style/SubItemDlgScreenParent</item>
+        <item name="android:editTextBackground">@null</item>
+    </style>
+
+    <!-- 自定义提示dialog样式 -->
+    <style name="DeleteDialogStyle" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/Base.Animation.AppCompat.Dialog</item>
+        <!--是否浮在窗口之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--是否显示title-->
+        <item name="android:windowNoTitle">true</item>
+        <!--dialog之外没有焦点的区域是否罩上黑色半透明-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <declare-styleable name="BounceBackViewPager">
+        <attr name="overscroll_translation_bounce" format="dimension" />
+
+        <!-- Duration of animation when user releases the over scroll. Default is 400 ms. -->
+        <attr name="overscroll_animation_duration_bounce" format="integer" />
+    </declare-styleable>
+
+</resources>

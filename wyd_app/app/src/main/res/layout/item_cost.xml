@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/w_30"
+        android:text="捷诺维 磷酸西格列汀片 "
+        android:gravity="center_vertical"
+        android:textColor="#333333"
+        android:textSize="@dimen/f_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/w_30"
+        android:layout_alignParentRight="true"
+        android:text="￥108"
+        android:textColor="#333333"
+        android:textSize="@dimen/f_12"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_min_size_1"
+        android:layout_below="@+id/name"
+        android:background="#999999"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+</android.support.constraint.ConstraintLayout>

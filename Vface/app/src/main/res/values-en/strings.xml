@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">FaceLogin</string>
+
+    <string name="registered">Registered</string>
+
+    <string name="fast_login">Quick test login (recommended)</string>
+
+    <string name="face_library">The face of a library</string>
+
+    <string name="automatic_detection">Automatic detection</string>
+
+    <string name="select_album">Select from album</string>
+
+    <string name="enter_name">Please enter user name</string>
+
+    <string name="face_record_first">Please conduct face collection first</string>
+
+    <string name="name_can_not_be_null">The name cannot be empty</string>
+
+    <string name="registered_success">Registered successfully</string>
+
+    <string name="registered_fail">Registration failed</string>
+
+    <string name="face_library_manage">The face of a management</string>
+
+    <string name="detect_no_face">No face detected</string>
+    <string name="detect_face_in">Move your face into the frame</string>
+    <string name="detect_zoom_in">Bring your phone closer</string>
+    <string name="detect_zoom_out">Keep your phone away</string>
+    <string name="detect_head_up">Raise some</string>
+    <string name="detect_head_down">Head down</string>
+    <string name="detect_head_left">Adjust the head Angle to the left</string>
+    <string name="detect_head_right">Adjust the lower head Angle to the right</string>
+    <string name="detect_occ_face">Face covered</string>
+    <string name="detect_occ_left_eye">The left eye is covered</string>
+    <string name="detect_occ_right_eye">The right eye is covered</string>
+    <string name="detect_occ_nose">Covered nose</string>
+    <string name="detect_occ_mouth">Mouth covered</string>
+    <string name="detect_left_contour">The left cheek is covered</string>
+    <string name="detect_right_contour">The right cheek is covered</string>
+    <string name="detect_chin_contour">Chin covered</string>
+    <string name="detect_low_light">The light is brighter</string>
+    <string name="detect_keep">Please hold the phone firmly and keep your eyes on the phone</string>
+    <string name="detect_standard">Please face the phone</string>
+    <string name="detect_timeout">Detection timeout</string>
+    <string name="liveness_eye">A wink</string>
+    <string name="liveness_eye_left">Please blink your left eye</string>
+    <string name="liveness_eye_right">Please blink your right eye</string>
+    <string name="liveness_mouth">Open mouth</string>
+    <string name="liveness_head_left">Turn your head slowly to the left</string>
+    <string name="liveness_head_right">Turn your head slowly to the right</string>
+    <string name="liveness_head_left_right">Shook his head</string>
+    <string name="liveness_head_up">The slow rise</string>
+    <string name="liveness_head_down">Slow down</string>
+    <string name="liveness_good">Very good</string>
+</resources>

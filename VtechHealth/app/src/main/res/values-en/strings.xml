@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">health</string>
+    <string name="back">back</string>
+    <string name="health_tab_bpressure">Blood pressure</string>
+    <string name="health_tab_ecg">ecg</string>
+    <string name="health_tab_report">Report</string>
+    <string name="health_real_time">real-time</string>
+    <string name="health_avg">average</string>
+    <string name="health_heart_rate">rate bmp</string>
+    <string name="health_heart_rate_hint">rate</string>
+    <string name="health_pressure_high">Systolic mmHg</string>
+    <string name="health_pressure_high_hint">Systolic</string>
+    <string name="health_pressure_low_hint">Diastolic</string>
+    <string name="health_pressure_low">Diastolic mmHg</string>
+    <string name="warning_set">Alarm threshold setting</string>
+    <string name="calibration_set">Calibration</string>
+    <string name="calibration_dec">"When an individual's blood pressure and heart rate data exceed the normal range, calibration values are required to obtain better measurement results"</string>
+    <string name="warning_value">The alarm threshold</string>
+    <string name="calibration">Calibration</string>
+    <string name="digits_num">0123456789</string>
+    <string name="health_i_know">I know!</string>
+    <string name="str_calbration_hint">Please place your finger in the blood pressure measurement area and hold it there until the calibration is completed</string>
+    <string name="str_start_calibration">Start the calibration</string>
+    <string name="str_calibration_success">Successful calibration</string>
+    <string name="str_calibration_fail">Input failed! \n please start the calibration again</string>
+    <string name="str_calibrating">In the calibration</string>
+    <string name="str_start_calibrating">Start</string>
+    <string name="str_wait_calibrating">In the calibration...</string>
+    <string name="str_clear_success">Calibration data cleared successfully！</string>
+    <string name="str_clear_fail">Calibration data cleanup failed！</string>
+    <string name="str_start_measure">Please place your finger and start collecting data</string>
+    <string name="str_cur_no_data">No data has been collected yet, please adjust your finger to continue the measurement</string>
+    <string name="str_cur_rate">"Current heart rate%1$d Exceeding the warning threshold %2$d" </string>
+    <string name="str_cur_sbp">"Current systolic pressure%1$d Exceeding the warning threshold %2$d" </string>
+    <string name="str_cur_bdp">"Current diastolic pressure%1$d Exceeding the warning threshold %2$d" </string>
+    <string name="str_health_stop">"Measurement end Current systolic  %1$s Diastolic  %2$s Heart rate %3$s" </string>
+    <string name="str_please_intput_rate">Please enter the systolic pressure</string>
+    <string name="str_please_intput_sbp">Please enter diastolic blood pressure</string>
+    <string name="str_please_intput_bdp">Please enter heart rate</string>
+    <string name="str_sure">Sure</string>
+    <string name="clear">Clear</string>
+    <string name="str_intput_rate">Please enter heart rate threshold</string>
+    <string name="str_intput_sbp">Please enter the systolic threshold</string>
+    <string name="str_input_bdp">Please enter diastolic blood pressure threshold</string>
+    <string name="str_measure">measurement</string>
+    <string name="str_measuring">Measuring</string>
+    <string name="str_set_warning">Please click to set the alarm threshold</string>
+    <string name="str_cur_set"> The alarm threshold%1$d/%2$d mmHg %3$d bmp</string>
+    <string name="str_hint_hi">Hi～！</string>
+    <string name="str_hint_dec">In order for you to better use, please first understand the correct way</string>
+    <string name="str_set_calibration">Set calibration value</string>
+    <string name="str_pulse">The pulse waveform</string>
+
+    <string name="heart_data">Heart rate data</string>
+    <string name="heart_rate_variability">Heart rate variability</string>
+    <string name="data_meaning">Data meaning</string>
+    <string name="analysis_of_heart_rate_variability">Analysis of heart rate variability</string>
+    <string name="analysis_of_heart_rate_variability_msg">HRV (heart rate variability) can be calculated by time domain and frequency</string>
+    <string name="analysis_of_heart_rate_variability_describe">The following data are the parameters involved</string>
+    <string name="time_domain_parameter">The time domain parameter</string>
+    <string name="frequency_parameter">The frequency parameter</string>
+
+    <string name="ecg_measurement_completed">Ecg measurement has been completed</string>
+    <string name="str_start">start</string>
+    <string name="str_ok">Ok</string>
+    <string name="str_data">Data</string>
+    <string name="str_wave">Wave</string>
+    <string name="str_setting">Setting</string>
+    <string name="str_name">name</string>
+    <string name="str_age">Age</string>
+    <string name="str_sex">Sex</string>
+    <string name="str_id">ID</string>
+    <string name="str_area">Area</string>
+    <string name="str_set">User Setting</string>
+    <string name="str_cancle">cancle</string>
+    <string name="str_know">I know</string>
+    <string name="str_touch">Touch the thumb lightly</string>
+    <string name="str_signal">Signal Quality:%1$s</string>
+    <string name="str_hrv_ms">hrv/ms</string>
+    <string name="str_mood">mood</string>
+    <string name="str_hr_bmp">hr/bmp</string>
+    <string name="str_load_img_success">Avatar uploaded successfully</string>
+    <string name="str_load_img_fail">Avatar upload failed</string>
+    <string name="str_userinfo_success">User information was updated successfully</string>
+    <string name="str_userinfo_fail">User information update failed</string>
+
+    <string-array  name="heart_data_mean_title">
+        <item >HRV (heart rate variability)</item>
+        <item >HR (steady heart rate)</item>
+        <item >mood</item>
+    </string-array >
+
+    <string-array  name="heart_data_mean_describe">
+        <item >The heartbeat cycle was different with reference value of 1-300ms</item>
+        <item >Robust estimation of heart rate, reference value 40-170 BMP</item>
+        <item >1-100, the lower the value, the calmer</item>
+    </string-array >
+
+    <string-array  name="str_sex">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array >
+
+</resources>

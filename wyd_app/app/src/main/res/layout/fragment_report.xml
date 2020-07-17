@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/w_42"
+        android:layout_marginTop="@dimen/w_12"
+        android:gravity="center"
+        android:text="@string/report_center"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/w_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.vtech.app.view.BounceScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/w_10">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/safe_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/shape_report"
+                android:visibility="visible"
+                app:layout_constraintDimensionRatio="h,1:0.31"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.88">
+
+                <TextView
+                    android:id="@+id/tab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/w_20"
+                    android:layout_marginTop="@dimen/w_15"
+                    android:text="@string/safe_report"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/w_12"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--                <com.vtech.app.view.PieChart3D01View
+                                    android:id="@+id/halfcircle_view"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginLeft="@dimen/w_40"
+                                    app:layout_constraintDimensionRatio="h,1:1"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tab1"
+                                    app:layout_constraintWidth_percent="0.26" />-->
+
+
+                <TextView
+                    android:id="@+id/lable1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/w_10"
+                    android:drawableLeft="@drawable/shape_circle_red"
+                    android:drawablePadding="@dimen/w_10"
+                    android:text="@string/door_error"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/w_10"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tab1" />
+
+                <TextView
+                    android:id="@+id/lable2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/w_8"
+                    android:drawableLeft="@drawable/shape_circle_black"
+                    android:drawablePadding="@dimen/w_10"
+                    android:text="@string/infrared_correlation_error"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/w_10"
+                    app:layout_constraintLeft_toLeftOf="@+id/lable1"
+                    app:layout_constraintTop_toBottomOf="@+id/lable1" />
+
+
+                <TextView
+                    android:id="@+id/lable3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/shape_circle_gray"
+                    android:drawablePadding="@dimen/w_10"
+                    android:text="@string/temperature_is_too_high"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/w_10"
+                    app:layout_constraintLeft_toRightOf="@+id/lable1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/lable1" />
+
+                <TextView
+                    android:id="@+id/lable4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/w_8"
+                    android:drawableLeft="@drawable/shape_circle_normal"
+                    android:drawablePadding="@dimen/w_10"
+                    android:text="@string/infrared_intrusion"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/w_10"
+                    app:layout_constraintLeft_toLeftOf="@+id/lable3"
+                    app:layout_constraintTop_toBottomOf="@+id/lable3" />
+
+
+                <TextView
+                    android:id="@+id/lable5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/w_8"
+                    android:drawableLeft="@drawable/shape_circle_normal"
+                    android:drawablePadding="@dimen/w_10"
+                    android:text="@string/protection_alarm"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/w_10"
+                    app:layout_constraintLeft_toLeftOf="@+id/lable2"
+                    app:layout_constraintTop_toBottomOf="@+id/lable2" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/health_report"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/w_8"
+                android:background="@drawable/shape_report"
+                android:paddingBottom="@dimen/w_15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/safe_layout"
+                app:layout_constraintWidth_percent="0.88">
+
+                <TextView
+                    android:id="@+id/tab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/w_20"
+                    android:layout_marginTop="@dimen/w_15"
+                    android:text="@string/health_report"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/w_12"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/heart_report_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/w_5"
+                    android:background="@drawable/bg_card_report"
+                    app:layout_constraintDimensionRatio="w,1:1.25"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tab2"
+                    app:layout_constraintWidth_percent="0.88">
+
+
+                    <TextView
+                        android:id="@+id/heart_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/w_15"
+                        android:layout_marginTop="@dimen/w_5"
+                        android:text="@string/heart_rate"
+                        android:textColor="#ff4f5f6f"
+                        android:textSize="@dimen/w_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/w_5"
+                        android:text="Heart rate"
+                        android:textColor="#fc4c7a"
+                        android:textSize="@dimen/w_8"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/heart_tab"
+                        app:layout_constraintBottom_toBottomOf="@id/heart_tab"
+                        app:layout_constraintLeft_toRightOf="@+id/heart_tab" />
+
+
+                    <RadioGroup
+                        android:id="@+id/heart_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/w_5"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/heart_tab">
+
+                        <RadioButton
+                            android:id="@+id/day"
+                            android:layout_width="@dimen/w_50"
+                            android:layout_height="@dimen/w_16"
+                            android:layout_marginRight="@dimen/w_15"
+                            android:background="@drawable/selector_day"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:text="@string/day"
+                            android:textColor="@drawable/selector_text_color"
+                            android:textSize="@dimen/w_10" />
+
+                        <RadioButton
+                            android:id="@+id/week"
+                            android:layout_width="@dimen/w_50"
+                            android:layout_height="@dimen/w_16"
+                            android:background="@drawable/selector_day"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/week"
+                            android:textColor="@drawable/selector_text_color"
+                            android:textSize="@dimen/w_10" />
+
+                        <RadioButton
+                            android:id="@+id/month"
+                            android:layout_width="@dimen/w_50"
+                            android:layout_height="@dimen/w_16"
+                            android:layout_marginLeft="@dimen/w_15"
+                            android:background="@drawable/selector_day"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/month"
+                            android:textColor="@drawable/selector_text_color"
+                            android:textSize="@dimen/w_10" />
+
+                    </RadioGroup>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/mLineChar"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="h,1:0.6"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/heart_group"
+                        app:layout_constraintWidth_percent="0.88" />
+
+                    <TextView
+                        android:id="@+id/max"
+                        android:layout_width="@dimen/w_80"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/w_12"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#37474F"
+                        android:textSize="@dimen/w_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/average"
+                        app:layout_constraintRight_toLeftOf="@+id/average" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/max"
+                        android:textColor="#37474F"
+                        android:textSize="@dimen/w_10"
+                        app:layout_constraintCircle="@+id/max"
+                        app:layout_constraintCircleAngle="180"
+                        app:layout_constraintCircleRadius="@dimen/w_15" />
+
+                    <TextView
+                        android:id="@+id/average"
+                        android:layout_width="@dimen/w_80"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/w_3"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#37474F"
+                        android:textSize="@dimen/w_12"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/mLineChar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/avg"
+                        android:textColor="#37474F"
+                        android:textSize="@dimen/w_10"
+                        app:layout_constraintCircle="@+id/average"
+                        app:layout_constraintCircleAngle="180"
+                        app:layout_constraintCircleRadius="@dimen/w_15" />
+
+                    <TextView
+                        android:id="@+id/min"
+                        android:layout_width="@dimen/w_80"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/w_12"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#37474F"
+                        android:textSize="@dimen/w_12"
+                        app:layout_constraintBottom_toBottomOf="@id/average"
+                        app:layout_constraintLeft_toRightOf="@+id/average" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/min"
+                        android:textColor="#37474F"
+                        android:textSize="@dimen/w_10"
+                        app:layout_constraintCircle="@+id/min"
+                        app:layout_constraintCircleAngle="180"
+                        app:layout_constraintCircleRadius="@dimen/w_15" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/blood_report_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/w_3"
+                    android:background="@drawable/bg_card_report"
+                    android:visibility="visible"
+                    app:layout_constraintDimensionRatio="w,1:1.42"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/heart_report_view"
+                    app:layout_constraintWidth_percent="0.88">
+
+
+                    <TextView
+                        android:id="@+id/blood_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/w_15"
+                        android:layout_marginTop="@dimen/w_5"
+                        android:text="@string/blood_pressure"
+                        android:textColor="#ff4f5f6f"
+                        android:textSize="@dimen/w_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/w_5"
+                        android:text="Blood pressure"
+                        android:textColor="#6BB8D8"
+                        android:textSize="@dimen/w_8"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/blood_tab"
+                        app:layout_constraintBottom_toBottomOf="@id/blood_tab"
+                        app:layout_constraintLeft_toRightOf="@+id/blood_tab" />
+
+
+                    <RadioGroup
+                        android:id="@+id/blood_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/w_5"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/blood_tab">
+
+                        <RadioButton
+                            android:id="@+id/day_b"
+                            android:layout_width="@dimen/w_50"
+                            android:layout_height="@dimen/w_16"
+                            android:layout_marginRight="@dimen/w_15"
+                            android:background="@drawable/selector_day"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:text="@string/day"
+                            android:textColor="@drawable/selector_text_color"
+                            android:textSize="@dimen/w_10" />
+
+                        <RadioButton
+                            android:id="@+id/week_b"
+                            android:layout_width="@dimen/w_50"
+                            android:layout_height="@dimen/w_16"
+                            android:background="@drawable/selector_day"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/week"
+                            android:textColor="@drawable/selector_text_color"
+                            android:textSize="@dimen/w_10" />
+
+                        <RadioButton
+                            android:id="@+id/month_b"
+                            android:layout_width="@dimen/w_50"
+                            android:layout_height="@dimen/w_16"
+                            android:layout_marginLeft="@dimen/w_15"
+                            android:background="@drawable/selector_day"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/month"
+                            android:textColor="@drawable/selector_text_color"
+                            android:textSize="@dimen/w_10" />
+                    </RadioGroup>
+
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/mBarChart"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="visible"
+                        app:layout_constraintDimensionRatio="h,1:0.6"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/blood_group"
+                        app:layout_constraintWidth_percent="0.88" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/electrocardiogram_report_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/w_3"
+                    android:background="@drawable/bg_card_report"
+                    android:paddingBottom="@dimen/w_10"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/blood_report_view"
+                    app:layout_constraintWidth_percent="0.88">
+
+
+                    <TextView
+                        android:id="@+id/electrocardiogram_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/w_15"
+                        android:layout_marginTop="@dimen/w_5"
+                        android:text="@string/heart_chart"
+                        android:textColor="#ff4f5f6f"
+                        android:textSize="@dimen/w_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/w_5"
+                        android:text="Electrocardiogram"
+                        android:textColor="#6BB8D8"
+                        android:textSize="@dimen/w_8"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/electrocardiogram_tab"
+                        app:layout_constraintBottom_toBottomOf="@id/electrocardiogram_tab"
+                        app:layout_constraintLeft_toRightOf="@+id/electrocardiogram_tab" />
+
+
+                    <!--                    <TextView
+                                            android:id="@+id/speed"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="@dimen/w_20"
+                                            android:layout_marginTop="@dimen/w_5"
+                                            android:gravity="center_vertical"
+                                            android:text="走速\t25mm/s"
+                                            android:textColor="#666666"
+                                            android:textSize="@dimen/w_10"
+                                            app:layout_constraintLeft_toLeftOf="@id/ecg_pulse"
+                                            app:layout_constraintTop_toBottomOf="@id/electrocardiogram_tab" />
+
+                                        <TextView
+                                            android:id="@+id/buff"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="@dimen/w_20"
+                                            android:layout_marginLeft="@dimen/w_60"
+                                            android:gravity="center_vertical"
+                                            android:text="增益\t10mm/mv"
+                                            android:textColor="#666666"
+                                            android:textSize="@dimen/w_10"
+                                            app:layout_constraintBottom_toBottomOf="@id/speed"
+                                            app:layout_constraintLeft_toRightOf="@+id/speed" />-->
+
+
+                    <!--                    <ImageView
+                                            android:id="@+id/electrocardiogram_img"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:layout_marginTop="@dimen/w_5"
+                                            android:scaleType="fitXY"
+                                            android:src="@mipmap/heart_chart"
+                                            app:layout_constraintDimensionRatio="h,1:0.5"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:layout_constraintRight_toRightOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/speed"
+                                            app:layout_constraintWidth_percent="0.88" />-->
+
+                    <com.androidplot.xy.XYPlot
+                        android:id="@+id/ecg_plot"
+                        androidPlot.backgroundPaint.color="#FFFFFF"
+                        androidPlot.borderPaint.color="#FFFFFF"
+                        renderMode="useBackgroundThread"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/w_5"
+                        app:graphMarginBottom="0dp"
+
+                        app:graphMarginLeft="0dp"
+                        app:graphMarginRight="0dp"
+                        app:graphMarginTop="0dp"
+                        app:graphPaddingBottom="0dp"
+                        app:graphPaddingLeft="0dp"
+                        app:graphPaddingTop="0dp"
+                        app:gridBackgroundColor="#FFFFFF"
+
+                        app:layout_constraintDimensionRatio="h,1:0.5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/electrocardiogram_tab"
+
+                        app:layout_constraintWidth_percent="0.88"
+
+                        app:legendAnchor="right_bottom"
+
+                        app:legendHeight="0dp"
+                        app:legendHeightMode="absolute"
+                        app:legendWidth="0dp"
+                        app:legendWidthMode="absolute"
+                        app:rangeTitle=""
+                        app:title="" />
+                    />
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/w_8"
+                android:layout_marginBottom="@dimen/w_15"
+                android:background="@drawable/shape_report"
+                android:paddingBottom="@dimen/w_10"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/health_report"
+                app:layout_constraintWidth_percent="0.88">
+
+
+                <TextView
+                    android:id="@+id/cost_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/w_20"
+                    android:layout_marginTop="@dimen/w_5"
+                    android:text="费用报告"
+                    android:textColor="#ff4f5f6f"
+                    android:textSize="@dimen/w_12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/medicem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/w_5"
+                    android:background="@mipmap/bg_drug"
+                    android:gravity="center"
+                    android:text="药品(*已食用）"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/w_10"
+                    app:layout_constraintLeft_toLeftOf="@id/cost_tab"
+                    app:layout_constraintTop_toBottomOf="@id/cost_tab" />
+
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/w_20"
+                    android:background="@mipmap/bg_price"
+                    android:gravity="center"
+                    android:text="价格"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/w_10"
+                    app:layout_constraintBottom_toBottomOf="@id/medicem"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/widget_min_size_1"
+                    android:layout_marginTop="@dimen/w_8"
+                    android:background="#999999"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/medicem"
+                    app:layout_constraintWidth_percent="0.88" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cost_list_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/w_10"
+                    android:scrollbars="none"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/medicem"
+                    app:layout_constraintWidth_percent="0.88">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/w_10"
+                    android:layout_marginBottom="@dimen/w_10"
+                    android:text="总计：￥500"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/w_12"
+                    app:layout_constraintRight_toRightOf="@id/cost_list_view"
+                    app:layout_constraintTop_toBottomOf="@id/cost_list_view" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </com.vtech.app.view.BounceScrollView>
+</android.support.constraint.ConstraintLayout>

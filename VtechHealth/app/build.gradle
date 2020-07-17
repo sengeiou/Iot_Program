@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+def getTime() {
+    return new java.text.SimpleDateFormat("yyyyMMddHHmm").format(new Date());
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+    defaultConfig {
+        applicationId "com.vtech.vhealth"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 100
+        versionName "1.0.${getTime()}"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    sourceSets{
+        main {
+            jni.srcDirs = []
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
+        jni.srcDirs = [] //disable automatic ndk-build call
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "VHealth.apk"
+        }
+    }
+
+    signingConfigs {
+        def password = "vtechsz"
+        def alias = "androiddebugkey"
+        def filePath = "platform.jks"  //如  ../facesharp.jks//签名文件路径
+
+        debug {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+        release {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.orhanobut:logger:2.1.1'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation "com.squareup.okhttp3:okhttp:4.2.0"
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.litepal.android:java:3.0.0'
+    implementation 'com.androidplot:androidplot-core:1.5.7'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+}

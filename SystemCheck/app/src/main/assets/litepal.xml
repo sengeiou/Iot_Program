@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="vhealth" ></dbname>
+    <version value="1" ></version>
+    <list>
+        <mapping class="com.vtech.check.function.bean.HealthUploadBean" />
+        <mapping class="com.vtech.check.function.bean.EcgBean" />
+    </list>
+</litepal>

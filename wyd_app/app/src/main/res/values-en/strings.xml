@@ -1,0 +1,205 @@
+<resources>
+    <string name="app_name">VLauncher</string>
+
+
+    <!-- 一维数组 -->
+    <string-array name="applist">
+
+        <item>com.android.camera2</item>
+        <item>com.android.contacts</item>
+        <item>com.android.deskclock</item>
+        <item>com.android.dialer</item>
+
+        <item>com.android.gallery3d</item>
+        <item>com.android.music</item>
+        <item>com.android.settings</item>
+
+        <item>com.flywisesz.x2m200</item>
+        <item>com.softwinner.fireplayer</item>
+        <item>com.vetch.schedule</item>
+        <item>com.vtech.homesecurity</item>
+
+    </string-array>
+
+    <!--  *******************************************桌面中心*********************************************  -->
+
+    <string name="phone">Phone</string>
+
+    <string name="health">Health</string>
+
+    <string name="safe">Safety</string>
+
+    <string name="schedule">Schedule</string>
+
+    <string name="at_house">At home</string>
+
+    <string name="alway_from_house">Leave home</string>
+
+    <string name="recent_schedule">The recent schedule</string>
+
+    <string name="real_time_security">Real-time security</string>
+
+    <string name="joint_protection">Joint protection</string>
+
+    <string name="normal_protection">Normal protection</string>
+
+    <string name="name">Name：</string>
+    <string name="telephone">Telephone：</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="a_key_protection">A key protection</string>
+
+    <string name="a_key_removal">A key removal</string>
+
+    <string name="no_message">There is no protection message</string>
+
+    <string name="not_protection">No protection</string>
+
+    <string name="is_protection">Have protection</string>
+
+    <string name="wait_protection">Waiting for protection</string>
+
+    <string name="area_normal">Zone is normal</string>
+
+    <string name="area_error">Zone exception</string>
+
+    <string name="received_call">Phone answered</string>
+
+    <string name="unreceived_call">Missed call</string>
+
+    <string name="received_message">SMS sent</string>
+
+    <string name="unreceived_message">SMS is not sent</string>
+
+    <string name="human_activity_detected">Human activity detected</string>
+
+    <string name="human_activity_undetected">No human activity detected</string>
+
+    <string name="no_safe_report">No abnormalities were detected</string>
+
+    <string name="air_quality">Air quality </string>
+
+    <!--   ******************************************报告中心*****************************************  -->
+
+    <string name="report_center">The Report center</string>
+
+    <string name="safe_report">Safe report</string>
+
+    <string name="health_report">Health report</string>
+
+    <string name="blood_pressure">Blood pressure</string>
+
+    <string name="heart_chart">Electrocardiogram (ecg)</string>
+
+    <string name="heart_rate">Heart rate</string>
+
+    <string name="day">d</string>
+
+    <string name="week">w</string>
+
+    <string name="month">y</string>
+
+    <string name="max">Max</string>
+
+    <string name="avg">Avg</string>
+
+    <string name="min">Min</string>
+
+    <string name="door_error">Door magnetic alarm %d times</string>
+
+    <string name="infrared_correlation_error">Infrared counter alarm %d times</string>
+
+    <string name="temperature_is_too_high">Temperature alarm %d times</string>
+
+    <string name="infrared_intrusion">Infrared intrusion alarm %d times</string>
+
+    <string name="protection_alarm">Linkage protection alarm %d times</string>
+
+
+    <string name="sos_name">SOS</string>
+    <string name="phone_name">Phone</string>
+    <string name="msg_name">Messages</string>
+    <string name="health_name">Health Care</string>
+    <string name="chat_name">Video Chat</string>
+    <string name="iot_alarm_name">IOT Alarm</string>
+    <string name="nearby_name">Nearby</string>
+    <string name="contacts_name">Contacts</string>
+    <string name="settings_name">Settings</string>
+
+    <!-- An option in the 'Contact photo' dialog, if there is already a photo [CHAR LIMIT=50] -->
+    <string name="take_new_photo">Take new photo</string>
+
+    <!-- An option in the 'Contact photo' dialog, if there is no photo yet [CHAR LIMIT=50] -->
+    <string name="pick_photo">Choose photo</string>
+
+    <!-- An option in the 'Contact photo' dialog, if there is already a photo [CHAR LIMIT=50] -->
+    <string name="pick_new_photo">Select new photo</string>
+
+    <!-- An option in the 'Contact photo' dialog, if there is no photo yet [CHAR LIMIT=50] -->
+    <string name="take_photo">Take photo</string>
+
+    <!-- File Authority for the photo picker -->
+    <string name="photo_file_provider_authority">com.vtech.app.files</string>
+    <!-- Description in the dialog that appears if there are no pictures from which to create an icon for a contact -->
+    <string name="photoPickerNotFoundText">No pictures are available on the device.</string>
+    <!-- Toast displayed when saving a contact photo failed. [CHAR LIMIT=NONE] -->
+    <string name="contactPhotoSavedErrorToast">Couldn\'t save contact photo changes</string>
+
+    <string name="sos">SOS</string>
+    <string name="set">set</string>
+    <string name="recycle_list_empty">Your SOS contact is empty.\nYou can...</string>
+    <string name="import_contacts">Import Contacts</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="finish">Finish</string>
+    <string name="delete">Delete</string>
+    <string name="sos_introduce">Up to 3 emergency contacts can be added.\nLong press and drag contacts to adjust order.</string>
+    <string name="contacts">Contacts</string>
+    <string name="search_contacts">Search Contacts</string>
+    <string name="search">Search</string>
+    <string name="first_name">First Name</string>
+    <string name="Second_name">Second Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="save">Save</string>
+    <string name="edit_contact">Edit Contact</string>
+    <string name="delete_contact">Delete Contact</string>
+    <string name="contact_detatil_name">NAME</string>
+    <string name="contact_detatil_number">Number</string>
+    <string name="contact_detatil_call">CALL</string>
+    <string name="contact_detatil_sms">SMS</string>
+    <string name="contact_detatil_recent">Recent Calls</string>
+    <string name="contact_add_name">Name</string>
+    <string name="add_data_success">Data added successfully</string>
+    <string name="add_data_fail">Failed to add data</string>
+    <string name="update_data_success">Update data succeeded</string>
+    <string name="update_data_fail">Failed to update data</string>
+    <string name="delete_data_success">Delete successful</string>
+    <string name="record_today">Today</string>
+    <string name="record_yesterday">Yesterday</string>
+    <string name="select_one_contact">Please select a contact first</string>
+    <string name="select_three_contact">You can only select up to three contacts</string>
+    <string name="confirm_delete_app">Confirm to delete the app</string>
+    <string name="contact_collection">Collection</string>
+    <string name="change_photo">Change_photo</string>
+    <string name="remove_photo">removePhoto</string>
+    <string name="pick_application">Pick Application</string>
+    <string name="re_add_application">Do not add apps repeatedly</string>
+    <string name="no_content"> Name and mobile number cannot be empty</string>
+    <string name="str_loading">Loading</string>
+    <string name="have_contact">This contact has been added and cannot be added again</string>
+    <string name="no_number">Number cannot be empty</string>
+    <string name="pick_contacts">Contacts Picker</string>
+    <string name="no_contacts">No Contacts</string>
+    <string name="emergency_number">Emergency Number</string>
+    <string name="str_unknown">Unknown</string>
+    <string name="add_new_contact">Add new contact</string>
+    <string name="delete_dialer_record">Delete call log</string>
+    <string name="add_blocked_number">Join the blacklist</string>
+    <string name="det_blocked_number">Removed from blacklist</string>
+    <string name="str_total">search in all</string>
+    <string name="str_contact_end">contacts</string>
+    <string name="str_imei">IMEI</string>
+    <string name="str_ok">OK</string>
+
+</resources>
